@@ -1,0 +1,35 @@
+Opis rešenja
+Rešenje je dato opcijama, svaka ima redni broj.
+1.
+Moguće je dodati čvorove i grane ručno.
+2.
+Upisom txt fajla, program čita i generiše matricu susedstva.
+3.
+Prikaz grafa kao matrica susedstva.
+4.
+Dodavanje čvora, broja grana i težina grana između tog čvora i budućeg komšije.
+5.
+Upiše se naziv čvora koji treba obrisati. Sve njegove grane koje su imale težinu !=0 sada postaju 0.
+6.
+Dodavanje grane. Upišu se nazivi čvorova i željena težina između. Ako već postoji, neće moći da se doda.
+7.
+Brisanje grane. Upiše se željena grana i ona postaje 0.
+8.
+Brisanje matrice.
+9.
+Lajkovanje. Upiše se ime koje je lajkovalo i ime čije se lajkuje. Ako postoji verovatnoća između tih čvorova, povećaće
+se za 0.1. Ako ne, neće biti moguće lajkovati.
+10.
+Najverovatniji put. Upišu se dva željena imena. Koristi se modifikacija Dijkstra algoritma. Obilazi se svaki čvor
+i gleda da li je put preko njega verovatniji. Beleži se putanja obiđenih čvorova. Rekonstruiše se put tako što
+od ciljnog imena se ide unazad u nizu zabeleženih čvorova dok se ne stigne do početnog. To se čuva u novom nizu. Na
+kraju, ispisuje se taj niz u obrnutom poretku. Verovatnoće se ispisuju iz matrice. Ako se naiđe na nepostojeći čvor, 
+ispisaće se da putanja ne postoji.
+11.
+Najveća komponenta. Koristi se Kosarajuov algoritam. Sastoji se iz prvog dfs-a koji na kraju prolaska svakog čvora čuva
+na steku taj čvor. Matrica se transponuje. Drugi prolaz dfs-a sa steka skida čvorove i proalzi kroz njih. Prati se broj posećenih
+čvorova i niz tih čvorova. Na kraju se pamti najveći broj posećenih kao i niz koji ih čini.
+12.
+Uticaj.  Upiše se broj k. Koristi se Dijkstra algoritam. Prolazi se kroz svaki čvor i gleda najverovatniji put. Beleži se i da li se 
+može doći do svih čvorova. Ako ne, rešenje će biti 0 jer je uzeta pretpostavka da da bi čvor imao uopšte uticaj mora
+doći do svih. Na kraju se vrednosti sortiraju od najveće ka najmanjoj. Ispisaće se k-1 element sortiranog niza.
