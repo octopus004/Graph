@@ -85,7 +85,7 @@ float** load(ifstream& file, int num, int e, string* names) {
 
 
 }
-float** verticeAdding(int& e, string* names, float** matrix, int& num) {
+float** verticeAdding(int& e, string* names, float**& matrix, int& num) {
 	string line, a, b; float weight;
 	for (int i = 0; i < e; i++) {
 		cout << "Write in this format: Node a Node b weight" << endl;
@@ -102,7 +102,7 @@ float** verticeAdding(int& e, string* names, float** matrix, int& num) {
 	return matrix;
 
 }
-float** nodeAdding(int& num, string* names, float** matrix) {
+float** nodeAdding(int& num, string* names, float**& matrix) {
 	float weight;
 	string name, line, a, b;
 	cout << "Write a name you want to add:" << endl;
@@ -134,7 +134,7 @@ float** nodeAdding(int& num, string* names, float** matrix) {
 	matrix = verticeAdding(ver, names, newMatrix, num);
 	return matrix;
 }
-float** nodeRemove(int& num, string* names, float** matrix) {
+float** nodeRemove(int& num, string* names, float**& matrix) {
 	string name;
 	cout << "Write name you want to remove?" << endl;
 	cin >> name;
@@ -169,7 +169,7 @@ float** nodeRemove(int& num, string* names, float** matrix) {
 	cout << "Removed" << endl;
 	return matrix;
 }
-float** verticeRemove(int& num,float** matrix, string* names) {
+float** verticeRemove(int& num,float**& matrix, string* names) {
 	string a, b, line;
 	cin.ignore();
 	cout << "Write in this format: Node a Node b" << endl;
@@ -183,16 +183,20 @@ float** verticeRemove(int& num,float** matrix, string* names) {
 	cout << "Removed" << endl;
 	return matrix;
 }
-void Delete(int num, float** matrix) {
+void Delete(int num, float**& matrix, string* names) {
 	if (matrix != nullptr) {
 		for (int i = 0; i < num;i++) {
 			delete[] matrix[i];
 		}
 		delete[] matrix;
 		matrix = nullptr;
+		delete[] names;
+		names = nullptr;
 	}
+	
+	cout << "Deleted" << endl;
 }
-void Liking(int num, string* names, float** matrix) {
+void Liking(int num, string* names, float**& matrix) {
 	string a, b;
 	cout << "Write names under one another:" << endl;
 	cin >> a;
@@ -209,7 +213,7 @@ void Liking(int num, string* names, float** matrix) {
 	
 	cin.ignore();
 }
-float** transpose(float** matrix, int& num) {
+float** transpose(float**& matrix, int& num) {
 	float** mat1 = new float* [num];
 	for (int i = 0; i < num; i++) {
 		mat1[i] = new float[num];
@@ -219,7 +223,7 @@ float** transpose(float** matrix, int& num) {
 	}
 	return mat1;
 }
-void dfs2(int node, bool* visit, int * component, int& size, int& num, float** trans) {
+void dfs2(int node, bool* visit, int * component, int& size, int& num, float**& trans) {
 	int stack[1000];
 	int top = -1;
 	stack[++top] = node;
@@ -236,7 +240,7 @@ void dfs2(int node, bool* visit, int * component, int& size, int& num, float** t
 		}
 	}
 }
-void dfs(int num, float** matrix, int node, bool* visit, int* doneStack, int& donetop) {
+void dfs(int num, float**& matrix, int node, bool* visit, int* doneStack, int& donetop) {
 	int stack[1000];
 	int top = -1;
 	int size = 0;
@@ -265,7 +269,7 @@ void dfs(int num, float** matrix, int node, bool* visit, int* doneStack, int& do
 		}	
 	}
 }
-void largestComponent(int num, float** matrix, string* names) {
+void largestComponent(int num, float**& matrix, string* names) {
 	bool visit[1000] = { false };
 	int doneStack[1000];
 	int donetop = 0;
@@ -310,7 +314,7 @@ void largestComponent(int num, float** matrix, string* names) {
 }
 
 
-float** terminalInput(int& num, string* names, float** matrix, int& e) {
+float** terminalInput(int& num, string* names, float**& matrix, int& e) {
 	string nodes[100];
 	cout << "Number of nodes:" << endl;
 	while (!(cin >> num)) {
@@ -337,7 +341,7 @@ float** terminalInput(int& num, string* names, float** matrix, int& e) {
 	}
 	return matrix;
 }
-void Path(int num, string* names, float** matrix) {
+void Path(int num, string* names, float**& matrix) {
 	string line, a, b;
 	cin.ignore();
 	cout << "Write the path you want:" << endl;
@@ -420,7 +424,7 @@ void Path(int num, string* names, float** matrix) {
 	delete[] fullPath;
 
 }
-double dijkstra(int& num, float** matrix, int node) {
+double dijkstra(int& num, float**& matrix, int node) {
 	int size = 0;
 	double best;
 	double dist[1000];
@@ -465,7 +469,7 @@ double dijkstra(int& num, float** matrix, int node) {
 	return sum / size;
 	
 }
-void Influence(int& num,float** matrix, string* names) {
+void Influence(int& num,float**& matrix, string* names) {
 	double size;
 	float prob;
 	double Sizes[1000];
@@ -499,7 +503,7 @@ void Influence(int& num,float** matrix, string* names) {
 	}
 	cout << SizesName[k-1] << endl;
 }
-void graphRepresentation(int& num, string* names, float** matrix) {
+void graphRepresentation(int& num, string* names, float**& matrix) {
 	int maxNameLen = 0;
 	for (int i = 0; i < num; i++) {
 		if ((int)names[i].length() > maxNameLen)
@@ -536,6 +540,8 @@ int main() {
 		matrix[i] = new float[1000];
 	}
 	string* names = new string[20];
+
+	
 
 	while (true) {
 		menu();
@@ -590,7 +596,7 @@ int main() {
 			break;
 		}
 		case 8: {
-			Delete(num, matrix);
+			Delete(num, matrix, names);
 			break;
 		}
 		case 9: {
