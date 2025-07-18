@@ -140,7 +140,7 @@ float** nodeRemove(int& num, string* names, float**& matrix) {
 	cin >> name;
 	cin.ignore();
 	int j = Index(name, names, num);
-	for (int i = j; i < num-1; i++) {
+	for (int i = j; i < num - 1; i++) {
 		names[i] = names[i + 1];
 
 	}
@@ -163,13 +163,13 @@ float** nodeRemove(int& num, string* names, float**& matrix) {
 		delete[] matrix[i];
 	}
 	delete[] matrix;
-	
+
 	num--;
 	matrix = newMatrix;
 	cout << "Removed" << endl;
 	return matrix;
 }
-float** verticeRemove(int& num,float**& matrix, string* names) {
+float** verticeRemove(int& num, float**& matrix, string* names) {
 	string a, b, line;
 	cin.ignore();
 	cout << "Write in this format: Node a Node b" << endl;
@@ -193,7 +193,7 @@ void Delete(int num, float**& matrix, string* names) {
 		delete[] names;
 		names = nullptr;
 	}
-	
+
 	cout << "Deleted" << endl;
 }
 void Liking(int num, string* names, float**& matrix) {
@@ -203,14 +203,14 @@ void Liking(int num, string* names, float**& matrix) {
 	cin >> b;
 	int from = Index(a, names, num);
 	int to = Index(b, names, num);
-	if (matrix[from][to] != 0.00){
+	if (matrix[from][to] != 0.00) {
 		matrix[from][to] += 0.1;
 		cout << "Liked" << endl;
 	}
 	else {
 		cout << "Cannot be liked" << endl;
 	}
-	
+
 	cin.ignore();
 }
 float** transpose(float**& matrix, int& num) {
@@ -223,13 +223,13 @@ float** transpose(float**& matrix, int& num) {
 	}
 	return mat1;
 }
-void dfs2(int node, bool* visit, int * component, int& size, int& num, float**& trans) {
+void dfs2(int node, bool* visit, int* component, int& size, int& num, float**& trans) {
 	int stack[1000];
 	int top = -1;
 	stack[++top] = node;
 	visit[node] = true;
 	component[size++] = node;
-	while(top >= 0) {
+	while (top >= 0) {
 		int curr = stack[top--];
 		for (int neighbor = 0; neighbor < num; neighbor++) {
 			if (trans[curr][neighbor] != 0.0 && !visit[neighbor]) {
@@ -248,13 +248,13 @@ void dfs(int num, float**& matrix, int node, bool* visit, int* doneStack, int& d
 	bool proc[1000] = { false };
 	while (top >= 0) {
 		int curr = stack[top];
-		if (!visit[curr]) {	
+		if (!visit[curr]) {
 			visit[curr] = true;
 		}
-		
+
 		bool flag = false;
 		for (int neighbor = 0; neighbor < num; neighbor++) {
-			if (matrix[curr][neighbor] != 0.00  && !visit[neighbor]) {
+			if (matrix[curr][neighbor] != 0.00 && !visit[neighbor]) {
 				stack[++top] = neighbor;
 				flag = true;
 				break;
@@ -266,7 +266,7 @@ void dfs(int num, float**& matrix, int node, bool* visit, int* doneStack, int& d
 				doneStack[donetop++] = curr;
 			}
 			top--;
-		}	
+		}
 	}
 }
 void largestComponent(int num, float**& matrix, string* names) {
@@ -278,9 +278,9 @@ void largestComponent(int num, float**& matrix, string* names) {
 	int max = 0;
 
 	for (int i = 0; i < num; i++) {
-		if (!visit[i]) {	
+		if (!visit[i]) {
 			dfs(num, matrix, i, visit, doneStack, donetop);
-			
+
 		}
 	}
 	float** trans = transpose(matrix, num);
@@ -302,11 +302,16 @@ void largestComponent(int num, float**& matrix, string* names) {
 			}
 		}
 	}
-	for (int j = 0;j < max; j++) {
-		cout << maxSize[j] << " ";
+	if (max != 1) {
+		for (int j = 0; j < max; j++) {
+			cout << maxSize[j] << " ";
+		}
+	}
+	else {
+		cout << "No strongly connected nodes" << endl;
 	}
 	cout << endl;
-	
+
 	for (int i = 0; i < num; i++) {
 		delete[] trans[i];
 	}
@@ -352,7 +357,7 @@ void Path(int num, string* names, float**& matrix) {
 	int to = Index(b, names, num);
 
 	float* d = new float[num];
-	float* t = new float[num];
+	int* t = new int[num];
 	int* path = new int[num];
 	bool* visited = new bool[num];
 	for (int i = 0; i < num; i++) {
@@ -369,7 +374,7 @@ void Path(int num, string* names, float**& matrix) {
 
 		}
 		else {
-			t[i] = 0.00;
+			t[i] = -1;
 		}
 	}
 	d[from] = 1.0;
@@ -399,13 +404,18 @@ void Path(int num, string* names, float**& matrix) {
 	int* fullPath = new int[num];
 	int current = to;
 	int pathIndex = 0;
-	if (current == -1) {
-		cout << "Invalid path" << endl;
-		return;
-	}
+
 	while (current != from && current != -1) {
 		fullPath[pathIndex++] = current;
 		current = t[current];
+	}
+	if (current == -1) {
+		cout << "Invalid path" << endl;
+		delete[] d;
+		delete[] t;
+		delete[] visited;
+		delete[] fullPath;
+		return;
 	}
 	fullPath[pathIndex++] = from;
 
@@ -439,7 +449,7 @@ double dijkstra(int& num, float**& matrix, int node) {
 		int n = -1;
 		double max = 0.00;
 		for (int neigbor = 0; neigbor < num; neigbor++) { //trazim komsiju kojeg nisam posetila sa najvecom vrv
-			if (dist[neigbor] > max && !visit[neigbor]){
+			if (dist[neigbor] > max && !visit[neigbor]) {
 				max = dist[neigbor];
 				n = neigbor;
 			}
@@ -464,12 +474,12 @@ double dijkstra(int& num, float**& matrix, int node) {
 			size++;
 		}
 	}
-	
-	if (size == 0 || size != num -1) return 0.00;
+
+	if (size == 0 || size != num - 1) return 0.00;
 	return sum / size;
-	
+
 }
-void Influence(int& num,float**& matrix, string* names) {
+void Influence(int& num, float**& matrix, string* names) {
 	double size;
 	float prob;
 	double Sizes[1000];
@@ -481,7 +491,7 @@ void Influence(int& num,float**& matrix, string* names) {
 		Sizes[node] = size;
 		SizesName[node] = names[node];
 	}
-	
+
 	for (int i = 0; i < num - 1; i++) {
 		for (int j = i + 1; j < num; j++) {
 			if (Sizes[i] < Sizes[j]) {
@@ -497,11 +507,11 @@ void Influence(int& num,float**& matrix, string* names) {
 	int k;
 	cout << "Enter k-th user:" << endl;
 	cin >> k;
-	if (Sizes[k - 1] == 0.00) { 
-		cout << "Doesnt have influence on every user." << endl; 
-		return; 
+	if (Sizes[k - 1] == 0.00) {
+		cout << "Doesnt have influence on every user." << endl;
+		return;
 	}
-	cout << SizesName[k-1] << endl;
+	cout << SizesName[k - 1] << endl;
 }
 void graphRepresentation(int& num, string* names, float**& matrix) {
 	int maxNameLen = 0;
@@ -541,7 +551,7 @@ int main() {
 	}
 	string* names = new string[20];
 
-	
+
 
 	while (true) {
 		menu();
