@@ -33,3 +33,986 @@ na steku taj čvor. Matrica se transponuje. Drugi prolaz dfs-a sa steka skida č
 Uticaj.  Upiše se broj k. Koristi se Dijkstra algoritam. Prolazi se kroz svaki čvor i gleda najverovatniji put. Beleži se i da li se 
 može doći do svih čvorova. Ako ne, rešenje će biti 0 jer je uzeta pretpostavka da da bi čvor imao uopšte uticaj mora
 doći do svih. Na kraju se vrednosti sortiraju od najveće ka najmanjoj. Ispisaće se k-1 element sortiranog niza.
+
+logovi
+
+Choose an action (number without .)
+1. Input from terminal 
+2. Input from file     
+3. Graph representation
+4. Node adding
+5. Node removal        
+6. Vertice adding      
+7. Vertice removal
+8. Graph deletion 
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+2
+File name (including extension):
+network6.txt 
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+3
+           Anastasija Maja       Marko      Matija     Nikola     Sanja      
+Anastasija 0          0          0.55       0          0.4        0
+Maja       0.71       0          0.43       0          0          0
+Marko      0          0          0          0          0          0
+Matija     0          0          0.82       0          0          0.21       
+Nikola     0          0          0.88       0          0          0.65       
+Sanja      0.39       0.74       0          0          0          0          
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+12
+Enter k-th user:
+1
+Marko
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+11
+Anastasija Maja Sanja Nikola 
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+10
+Write the path you want:
+Nikola Anastasija
+Nikola-(0.65) -> Sanja-(0.74) -> Maja-(0.61) -> Anastasija
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+9
+Write names under one another:
+Maja 
+Anastasija
+Liked
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+4
+Write a name you want to add:
+ja
+Write number of vertices you want to add:
+2
+Write in this format: Node a Node b weight
+ja Sanja 0.5
+Write in this format: Node a Node b weight
+Marko ja 0.3
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+3
+           Anastasija Maja       Marko      Matija     Nikola     Sanja      ja        
+
+Anastasija 0          0          0.55       0          0.4        0          0
+
+Maja       0.71       0          0.43       0          0          0          0
+
+Marko      0          0          0          0          0          0          0.3       
+
+Matija     0          0          0.82       0          0          0.21       0
+
+Nikola     0          0          0.88       0          0          0.65       0
+
+Sanja      0.39       0.74       0          0          0          0          0
+
+ja         0          0          0          0          0          0.5        0
+
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+5           
+Write name you want to remove?
+Sanja
+Removed
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+3
+           Anastasija Maja       Marko      Matija     Nikola     ja
+Anastasija 0          0          0.55       0          0.4        0
+Maja       0.71       0          0.43       0          0          0
+Marko      0          0          0          0          0          0.3        
+Matija     0          0          0.82       0          0          0
+Nikola     0          0          0.88       0          0          0
+ja         0          0          0          0          0          0
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+6
+Write in this format: Node a Node b weight
+Marko Maja 0.4
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+3
+           Anastasija Maja       Marko      Matija     Nikola     ja
+Anastasija 0          0          0.55       0          0.4        0
+Maja       0.71       0          0.43       0          0          0
+Marko      0          0.4        0          0          0          0.3        
+Matija     0          0          0.82       0          0          0
+Nikola     0          0          0.88       0          0          0
+ja         0          0          0          0          0          0
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+7
+Write in this format: Node a Node b
+Nikola Marko
+Removed
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+3
+           Anastasija Maja       Marko      Matija     Nikola     ja
+Anastasija 0          0          0.55       0          0.4        0
+Maja       0.71       0          0.43       0          0          0
+Marko      0          0.4        0          0          0          0.3        
+Matija     0          0          0.82       0          0          0
+Nikola     0          0          0          0          0          0
+ja         0          0          0          0          0          0
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+8
+Deleted
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+13
+
+Choose an action (number without .)
+1. Input from terminal  
+2. Input from file      
+3. Graph representation 
+4. Node adding
+5. Node removal
+6. Vertice adding       
+7. Vertice removal      
+8. Graph deletion       
+9. Liking
+10. The most likely path
+11. Largest component   
+12. Influence
+13. Exit
+2
+File name (including extension):
+network15.txt
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+3
+       Alex   Alice  Ann    Arnold Bob    Jill   John   Kate   Lisa   Mark   Mary   Peter  Rick   Rob    Tom    
+Alex   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+Alice  0      0      0      0      0      0      0      0      0      0.15   0      0      0      0      0      
+Ann    0      0.94   0      0      0      0      0      0      0      0      0      0      0      0      0      
+Arnold 0      0      0      0      0      0      0      0.54   0      0      0      0      0.35   0      0
+Bob    0.57   0      0      0      0      0      0      0      0      0.48   0      0      0      0      0      
+Jill   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+John   0      0.42   0      0      0      0      0      0      0      0      0      0      0      0      0      
+Kate   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+Lisa   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+Mark   0.6    0      0.12   0      0.64   0      0      0      0      0      0      0      0      0      0      
+Mary   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0.18   
+Peter  0      0      0      0      0      0      0      0      0      0.5    0      0      0.48   0      0      
+Rick   0      0      0      0      0      0      0      0      0.48   0      0      0.5    0      0      0
+Rob    0      0      0      0      0      0      0      0      0.55   0      0.78   0      0      0      0
+Tom    0      0.66   0      0.88   0      0      0      0      0.7    0      0.97   0      0      0.37   0      
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+4
+Write a name you want to add:
+ja
+Write number of vertices you want to add:
+1
+Write in this format: Node a Node b weight
+ja Tom 0.4
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+3
+       Alex   Alice  Ann    Arnold Bob    Jill   John   Kate   Lisa   Mark   Mary   Peter  Rick   Rob    Tom    ja     
+Alex   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+Alice  0      0      0      0      0      0      0      0      0      0.15   0      0      0      0      0      0      
+Ann    0      0.94   0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+Arnold 0      0      0      0      0      0      0      0.54   0      0      0      0      0.35   0      0      0      
+Bob    0.57   0      0      0      0      0      0      0      0      0.48   0      0      0      0      0      0      
+Jill   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+John   0      0.42   0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+Kate   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+Lisa   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+Mark   0.6    0      0.12   0      0.64   0      0      0      0      0      0      0      0      0      0      0      
+Mary   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0.18   0      
+Peter  0      0      0      0      0      0      0      0      0      0.5    0      0      0.48   0      0      0      
+Rick   0      0      0      0      0      0      0      0      0.48   0      0      0.5    0      0      0      0
+Rob    0      0      0      0      0      0      0      0      0.55   0      0.78   0      0      0      0      0      
+Tom    0      0.66   0      0.88   0      0      0      0      0.7    0      0.97   0      0      0.37   0      0
+ja     0      0      0      0      0      0      0      0      0      0      0      0      0      0      0.4    0
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+5
+Write name you want to remove?
+ja
+Removed
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+3
+       Alex   Alice  Ann    Arnold Bob    Jill   John   Kate   Lisa   Mark   Mary   Peter  Rick   Rob    Tom    
+Alex   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+Alice  0      0      0      0      0      0      0      0      0      0.15   0      0      0      0      0      
+Ann    0      0.94   0      0      0      0      0      0      0      0      0      0      0      0      0      
+Arnold 0      0      0      0      0      0      0      0.54   0      0      0      0      0.35   0      0      
+Bob    0.57   0      0      0      0      0      0      0      0      0.48   0      0      0      0      0      
+Jill   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
+John   0      0.42   0      0      0      0      0      0      0      0      0      0      0      0      0      
+Kate   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
+Lisa   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+Mark   0.6    0      0.12   0      0.64   0      0      0      0      0      0      0      0      0      0
+Mary   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0.18   
+Peter  0      0      0      0      0      0      0      0      0      0.5    0      0      0.48   0      0
+Rick   0      0      0      0      0      0      0      0      0.48   0      0      0.5    0      0      0
+Rob    0      0      0      0      0      0      0      0      0.55   0      0.78   0      0      0      0
+Tom    0      0.66   0      0.88   0      0      0      0      0.7    0      0.97   0      0      0.37   0      
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+6
+Write in this format: Node a Node b weight
+Alex Arnold 0.4
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+3
+       Alex   Alice  Ann    Arnold Bob    Jill   John   Kate   Lisa   Mark   Mary   Peter  Rick   Rob    Tom    
+Alex   0      0      0      0.4    0      0      0      0      0      0      0      0      0      0      0      
+Alice  0      0      0      0      0      0      0      0      0      0.15   0      0      0      0      0      
+Ann    0      0.94   0      0      0      0      0      0      0      0      0      0      0      0      0      
+Arnold 0      0      0      0      0      0      0      0.54   0      0      0      0      0.35   0      0      
+Bob    0.57   0      0      0      0      0      0      0      0      0.48   0      0      0      0      0      
+Jill   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+John   0      0.42   0      0      0      0      0      0      0      0      0      0      0      0      0      
+Kate   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+Lisa   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+Mark   0.6    0      0.12   0      0.64   0      0      0      0      0      0      0      0      0      0      
+Mary   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0.18   
+Peter  0      0      0      0      0      0      0      0      0      0.5    0      0      0.48   0      0      
+Rick   0      0      0      0      0      0      0      0      0.48   0      0      0.5    0      0      0      
+Rob    0      0      0      0      0      0      0      0      0.55   0      0.78   0      0      0      0
+Tom    0      0.66   0      0.88   0      0      0      0      0.7    0      0.97   0      0      0.37   0      
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+7
+Write in this format: Node a Node b
+Alex Arnold
+Removed
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+3
+       Alex   Alice  Ann    Arnold Bob    Jill   John   Kate   Lisa   Mark   Mary   Peter  Rick   Rob    Tom    
+Alex   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+Alice  0      0      0      0      0      0      0      0      0      0.15   0      0      0      0      0      
+Ann    0      0.94   0      0      0      0      0      0      0      0      0      0      0      0      0      
+Arnold 0      0      0      0      0      0      0      0.54   0      0      0      0      0.35   0      0      
+Bob    0.57   0      0      0      0      0      0      0      0      0.48   0      0      0      0      0
+Jill   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+John   0      0.42   0      0      0      0      0      0      0      0      0      0      0      0      0      
+Kate   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+Lisa   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+Mark   0.6    0      0.12   0      0.64   0      0      0      0      0      0      0      0      0      0      
+Mary   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0.18   
+Peter  0      0      0      0      0      0      0      0      0      0.5    0      0      0.48   0      0      
+Rick   0      0      0      0      0      0      0      0      0.48   0      0      0.5    0      0      0      
+Rob    0      0      0      0      0      0      0      0      0.55   0      0.78   0      0      0      0      
+Tom    0      0.66   0      0.88   0      0      0      0      0.7    0      0.97   0      0      0.37   0      
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+9
+Write names under one another:
+Mark Alex
+Liked
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+3
+       Alex   Alice  Ann    Arnold Bob    Jill   John   Kate   Lisa   Mark   Mary   Peter  Rick   Rob    Tom    
+Alex   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+Alice  0      0      0      0      0      0      0      0      0      0.15   0      0      0      0      0      
+Ann    0      0.94   0      0      0      0      0      0      0      0      0      0      0      0      0      
+Arnold 0      0      0      0      0      0      0      0.54   0      0      0      0      0.35   0      0      
+Bob    0.57   0      0      0      0      0      0      0      0      0.48   0      0      0      0      0      
+Jill   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+John   0      0.42   0      0      0      0      0      0      0      0      0      0      0      0      0      
+Kate   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+Lisa   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      
+Mark   0.7    0      0.12   0      0.64   0      0      0      0      0      0      0      0      0      0      
+Mary   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0.18   
+Peter  0      0      0      0      0      0      0      0      0      0.5    0      0      0.48   0      0      
+Rick   0      0      0      0      0      0      0      0      0.48   0      0      0.5    0      0      0      
+Rob    0      0      0      0      0      0      0      0      0.55   0      0.78   0      0      0      0      
+Tom    0      0.66   0      0.88   0      0      0      0      0.7    0      0.97   0      0      0.37   0      
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+10
+Write the path you want:
+Ann Bob
+Ann-(0.94) -> Alice-(0.15) -> Mark-(0.64) -> Bob
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+11
+Alice Ann Mark Bob 
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+12
+Enter k-th user:
+1
+Doesnt have influence on every user.
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+8
+Deleted
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+13
+
+Choose an action (number without .)
+1. Input from terminal 
+2. Input from file     
+3. Graph representation
+4. Node adding
+5. Node removal        
+6. Vertice adding      
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+1
+Number of nodes:
+4
+Number of vertices:
+3
+Names of nodes (write them under one another):
+nina
+fica
+bata
+seka 
+Write in this format: Node a Node b weight
+nina fica 0.3
+Write in this format: Node a Node b weight
+seka fica 0.2
+Write in this format: Node a Node b weight
+seka nina 0.5
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+10
+Write the path you want:
+nina bata
+Invalid path
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+11
+No strongly connected nodes
+
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+12
+Enter k-th user:
+1
+Doesnt have influence on every user.
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+9
+Write names under one another:
+nina fica
+Liked
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+3
+     nina fica bata seka 
+nina 0    0.4  0    0
+fica 0    0    0    0    
+bata 0    0    0    0
+seka 0.5  0.2  0    0    
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+7
+Write in this format: Node a Node b
+seka nina
+Removed
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+6
+Write in this format: Node a Node b weight
+seka nina 0.6
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+3
+     nina fica bata seka 
+nina 0    0.4  0    0
+fica 0    0    0    0
+bata 0    0    0    0    
+seka 0.6  0.2  0    0
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+5
+Write name you want to remove?
+bata
+Removed
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+3
+     nina fica seka 
+nina 0    0.4  0
+fica 0    0    0
+seka 0.6  0.2  0
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+4
+Write a name you want to add:
+saja
+Write number of vertices you want to add:
+1
+Write in this format: Node a Node b weight
+saja nina 0.5
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+3
+     nina fica seka saja 
+nina 0    0.4  0    0
+fica 0    0    0    0
+seka 0.6  0.2  0    0
+saja 0.5  0    0    0
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+8
+Deleted
+Choose an action (number without .)
+1. Input from terminal
+2. Input from file
+3. Graph representation
+4. Node adding
+5. Node removal
+6. Vertice adding
+7. Vertice removal
+8. Graph deletion
+9. Liking
+10. The most likely path
+11. Largest component
+12. Influence
+13. Exit
+13
