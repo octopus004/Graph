@@ -7,11 +7,11 @@ Key features include:
 - Finding the largest strongly connected component using Kosaraju`s algorithm
 - Calculating influence scores using a modified Dijkstra algorithm for probability-based paths
 - Finding the most likely path between nodes with path reconstruction
-
+You can find detailed information and example inputs/outputs in **izvestaj.txt**.
 # How to run
 ```
-  g++ -o graph Source2.cpp
-  ./graph
+g++ -o graph Source2.cpp
+./graph
 
 ```
 Will see a menu with options. Enter the number corresponding to the action you want to perform and press Enter.
