@@ -2,8 +2,9 @@ This project implements a graph data structure as adjacency matrix with multiple
 
 Key features include:
 - Input from terminal or file
-- Adding and removing nodes and edges
+- Adding and removing nodes and edges, deleting the graph
 - Displaying the graph as an adjacency matrix
+- Liking — implemented as increasing the weight of an existing edge
 - Finding the largest strongly connected component using Kosaraju`s algorithm
 - Calculating influence scores using a modified Dijkstra algorithm for probability-based paths
 - Finding the most likely path between nodes with path reconstruction
