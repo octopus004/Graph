@@ -13,7 +13,6 @@ You can find detailed information and example inputs/outputs in **izvestaj.txt**
 ```
 g++ -o graph Source2.cpp
 ./graph
-
 ```
 Will see a menu with options. Enter the number corresponding to the action you want to perform and press Enter.
 For file input, provide the filename including its extension (make sure the file is in the same folder).
