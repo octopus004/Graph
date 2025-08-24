@@ -7,6 +7,7 @@ Key features include:
 - Finding the largest strongly connected component using Kosaraju`s algorithm
 - Calculating influence scores using a modified Dijkstra algorithm for probability-based paths
 - Finding the most likely path between nodes with path reconstruction
+
 You can find detailed information and example inputs/outputs in **izvestaj.txt**.
 # How to run
 ```
